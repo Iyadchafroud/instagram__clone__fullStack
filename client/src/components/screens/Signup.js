@@ -36,15 +36,8 @@ const SignIn  = ()=>{
     const uploadFields = ()=>{
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
  return( <div className="p-3 my-2 rounded">
-        <Toast>
-          <ToastHeader>
-            Reactstrap
-          </ToastHeader>
-          <ToastBody>
-            This is a toast on a white background — check it out!
-          </ToastBody>
-        </Toast>
-      </div>)// M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
+        M.toast({html: "invalid email",classes:"#c62828 red darken-3"})
+      </div>)// 
          }
         fetch("/signup",{
             method:"post",
