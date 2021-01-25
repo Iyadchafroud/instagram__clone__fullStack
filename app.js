@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const mongoose  = require('mongoose')
 const PORT = process.env.PORT || 5000
-const {MONGO__URI} = require('./config/keys')
+const {MONGO_URI} = require('./config/keys')
 
 
-mongoose.connect(MONGOURI,{
+mongoose.connect(MONGO_URI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 
